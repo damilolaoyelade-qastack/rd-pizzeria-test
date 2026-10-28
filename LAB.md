@@ -1,1 +1,1 @@
-Stale-index repro on dev, 2026-10-28T08:25:51Z
+Stale-index verify after fix, 2026-10-28T09:57:49Z
