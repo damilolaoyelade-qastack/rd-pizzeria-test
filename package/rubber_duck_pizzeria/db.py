@@ -224,6 +224,9 @@ def search_customers_raw(q: str):
 
 def list_orders(sort: str = "id", direction: str = "desc"):
     """Orders with their customer name, sorted for the order list page."""
+    if sort not in {"id", "order_code", "customer_id", "status", "amount", "location", "created_at", "note"}:
+        sort = "id"
+    direction = "asc" if str(direction).lower() == "asc" else "desc"
     conn = get_connection()
     try:
         rows = conn.execute(
